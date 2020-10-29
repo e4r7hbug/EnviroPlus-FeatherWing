@@ -30,7 +30,8 @@ try:
         # change screen brightness according to the amount of light detected
         pwm.duty_cycle = int(min(remap(prox, 0, 400, 3, (2**16 - 1)), (2**16 - 1)))
 
-        print(f"Lux: {lux:06.2f}, Proximity: {prox:04d}")
+        print(f"Lux: {lux:06.2f}, Proximity: {prox:04d}, duty_cycle: {pwm.duty_cycle}")
+
 
         time.sleep(0.05)
 except KeyboardInterrupt:
