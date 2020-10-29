@@ -100,6 +100,7 @@ class ScreenPlotter:
         if not(len(self.data_points) > self.bitmap.width):
             self.old_points = self.data_points
 
+        print(f"value length: {len(values)}")
         self.data_points.append(values)
 
         if len(self.data_points) > (self.bitmap.width + 1):
